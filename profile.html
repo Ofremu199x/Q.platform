@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Qonnect Profile</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="fontawsome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icons.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/simple-scrollbar.css">
+    </head>
+
+    <body>
+        <!-- start top row -->
+        <div class="row padding-10">
+            <div class="fixed-col-300 padding-10">
+                <a href="index.html"><img src="images/logo.png" alt="" /></a>
+            </div>
+            <div class="fixed-col-750 padding-10">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button"><i class="icon icon-search"></i></button>
+                  </div>
+                </div>
+            </div>
+            <div class="fixed-col-300 padding-10">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                  <button type="button" class="btn btn-outline-secondary"><i class="icon icon-trending"></i> Trending</button>
+
+                  <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="icon icon-user"></i> Viziru Andrei
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <a class="dropdown-item" href="profile.html"><img src="images/boy.png" class="image-round img-thumbnail" alt="" width="50" height="50" /> Profile</a>
+                      <a class="dropdown-item" href="schedule.html"><i class="icon icon-clock"></i> Schedule</a>
+                         <a class="dropdown-item" href="notifications.html"><i class="icon icon-notifications"></i> Notifications</a>
+                        <a class="dropdown-item" href="messages.html"><i class="icon icon-comment"></i> Messages</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="settings.html"><i class="icon icon-settings"></i> Settings</a>
+                      <a class="dropdown-item" href="help_center.html"><i class="icon icon-help-center"></i> Help center</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-close"></i> Logout</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div><!-- end top row -->
+        
+        <!-- start profile container -->
+        <div class="row">
+            <div class="col border d-flex">
+                <div class="col-auto p-2 border d-block">
+                    <div class="card small" style="max-width: 100px !important;">
+                        <div class="card-body text-center p-2">
+                            <img src="images/boy.png" width="100" height="100" class="img-thumbnail" />
+                        </div>
+                        <div class="card-footer align-items-center text-right">
+                            <button type="button" class="btn-reset" data-toggle="modal" data-target="#changeProfilePicture"><i class="icon icon-edit" ></i></button>    
+                            
+                        </div>
+                    </div>
+                    <!-- Modal for change profile picture -->
+                    <div class="modal fade" id="changeProfilePicture" tabindex="-1" role="dialog" aria-labelledby="lol" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body bg-profile">
+                                    <div class="col p-2 text-center">
+                                        <p class="text-muted" style="font-size: 40px;">Click or drag a photo here<br /><i class="icon icon-edit"></i></p>
+                                        
+                                    </div>
+                                    <div class="col p-2 small text-muted text-right">
+                                        <i class="icon icon-clock"></i> 3 decades ago
+                                    </div>
+                                </div>
+                                <div class="modal-header p-relative">
+                                    <div class="trailing">
+                                        <img src="images/trailing_profile.png" alt="" />
+                                    </div>
+                                    <div class="col p-0 small">
+                                        <img src="images/boy.png" width="50" height="50" class="image-round img-thumbnail" /> change current profile picture
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                </div>
+                                
+                                <div class="modal-footer small d-block">
+                                    <div class="col text-right p-2">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Upload</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- End Modal for change profile picture -->
+                    <hr />
+                    <div class="card small" style="max-width: 100px !important; opacity: 0.8;" onmouseover="this.style.opacity=1;" onmouseout="this.style.opacity=0.8;">
+                        <div class="card-body text-center p-2" style="background-image: url(images/picture.jpg);">
+                            <p style="color: aliceblue;"><b>06/04/1990</b></p>
+                        </div>
+                        <div class="card-footer align-items-center text-right">
+                            <button type="button" class="btn-reset" data-toggle="modal" data-target="#changeBirthdate"><i class="icon icon-edit" ></i></button>
+                        </div>
+                    </div>
+                    <!-- Modal for change birthdate -->
+                    <div class="modal fade" id="changeBirthdate" tabindex="-1" role="dialog" aria-labelledby="lol" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="media-post bg-profile">
+                                    <div class="col p-2 text-center">
+                                        <br />
+                                        <i class="icon icon-edit icon-large"></i><br /><br />
+                                        <div class="col p-2">
+                                            <input type="date" class="form-control" placeholder="Your birthdate" aria-label="Birthdate" aria-describedby="basic-addon2">
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col p-2 small text-muted text-right">
+                                        <i class="icon icon-clock"></i> 3 decades ago
+                                    </div>
+                                </div>
+                                <div class="modal-header p-relative">
+                                    <div class="trailing">
+                                        <img src="images/trailing_profile.png" alt="" />
+                                    </div>
+                                    <div class="col p-0">
+                                        <img src="images/boy.png" width="50" height="50" class="image-round img-thumbnail" /> <kbd>06 - April - 1990</kbd>
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                </div>
+                            
+                                <div class="modal-footer small d-block">
+                                    <div class="col text-right p-2">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- End Modal for for change birthdate -->
+                   
+                </div>
+                <div class="col p-2 border">
+                    <div class="card small" style="opacity: 0.8;" onmouseover="this.style.opacity=1;" onmouseout="this.style.opacity=0.8;">
+                        <div class="card-body" style="background-image: url(images/picture.jpg); background-position: left left;">
+                            <p style="color: aliceblue;"><b>This some bio so making it long i must lorem ipsum here</b></p>
+                        </div>
+                        <div class="card-footer align-items-center">
+                            <input type="checkbox" id="biozone" /><label for="biozone">&nbsp;Make my bio private</label>
+                            <button type="button" class="btn-reset" data-toggle="modal" data-target="#changeBio" style="float: right;"><i class="icon icon-edit" ></i></button>
+                        </div>
+                    </div>
+                    <!-- Modal for change bio -->
+                    <div class="modal fade" id="changeBio" tabindex="-1" role="dialog" aria-labelledby="lol" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="card-body bg-profile" style="background-image: url(images/picture.jpg); background-position: left left;">
+                                    <p style="color: aliceblue;"><b>This some bio so making it long i must lorem ipsum here</b></p>
+                                    <div class="col p-2 small text-muted text-right">
+                                        <i class="icon icon-clock"></i> 3 decades ago
+                                    </div>
+                                </div>
+                                <div class="modal-header p-relative">
+                                    <div class="trailing">
+                                        <img src="images/trailing_profile.png" alt="" />
+                                    </div>
+                                    <div class="col p-0 small">
+                                        <img src="images/boy.png" width="50" height="50" class="image-round img-thumbnail" /> change current bio
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                </div>
+                                <div class="modal-body small">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Choose bio background
+                                        </div>
+                                        <div class="card-body d-flex" style="flex-wrap: wrap;">
+                                            <div class="col-auto img-thumbnail" style="background-color: aqua; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                            <div class="col-auto img-thumbnail" style="background-color: firebrick; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                            <div class="col-auto img-thumbnail" style="background-color: forestgreen; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                            <div class="col-auto img-thumbnail" style="background-color: fuchsia; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                            <div class="col-auto img-thumbnail" style="background-color: dodgerblue; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                            <div class="col-auto img-thumbnail" style="background-color: dimgray; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                            <div class="col-auto img-thumbnail" style="background-color: aqua; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                        </div>
+                                    </div>
+                                   <br />
+                                    <div class="card">
+                                        <div class="card-header">
+                                            New bio
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="input-group mb-3 small">
+                                                <div class="input-group-prepend"> <span class="input-group-text" id="basic-addon1"><i class="icon icon-edit"></i></span></div>
+                                            
+                                                <textarea class="form-control form-control-sm" placeholder="Type your bio here..." aria-label="Bio" ariadescribedby="basic-addon1" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="modal-footer small d-block">
+                                    <div class="col text-right p-2">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- End Modal for for change bio -->
+                    
+                    
+                    <hr />
+                    
+                    
+                    <div class="card small" style="opacity: 0.8;" onmouseover="this.style.opacity=1;" onmouseout="this.style.opacity=0.8;">
+                        <div class="card-body" style="background-image: url(images/picture.jpg);">
+                            <p style="color: aliceblue;"><b>This is the favourite quote the user wants to display or not lollll!!!</b></p>
+                        </div>
+                        <div class="card-footer align-items-center">
+                            <input type="checkbox" id="quotezone" /><label for="quotezone">&nbsp;Make my quote private</label>
+                            <button type="button" class="btn-reset" data-toggle="modal" data-target="#changeQuote" style="float: right;"><i class="icon icon-edit" ></i></button>
+                        </div>
+                    </div>
+                    <!-- Modal for change bio -->
+                    <div class="modal fade" id="changeQuote" tabindex="-1" role="dialog" aria-labelledby="lol" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="card-body" style="background-image: url(images/picture.jpg);">
+                                    <p style="color: aliceblue;"><b>This is the favourite quote the user wants to display or not lollll!!!</b></p>
+                                    <div class="col p-2 small text-muted text-right">
+                                        <i class="icon icon-clock"></i> 3 decades ago
+                                    </div>
+                                </div>
+                                <div class="modal-header p-relative">
+                                    <div class="trailing">
+                                        <img src="images/trailing_profile.png" alt="" />
+                                    </div>
+                                    <div class="col p-0 small">
+                                        <img src="images/boy.png" width="50" height="50" class="image-round img-thumbnail" /> change current quote
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                </div>
+                                <div class="modal-body small">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Choose quote background
+                                        </div>
+                                        <div class="card-body d-flex">
+                                            <div class="col-auto img-thumbnail" style="background-color: aqua; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                            <div class="col-auto img-thumbnail" style="background-color: firebrick; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                            <div class="col-auto img-thumbnail" style="background-color: forestgreen; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                            <div class="col-auto img-thumbnail" style="background-color: fuchsia; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                            <div class="col-auto img-thumbnail" style="background-color: dodgerblue; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                            <div class="col-auto img-thumbnail" style="background-color: dimgray; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                            <div class="col-auto img-thumbnail" style="background-color: aqua; max-width: 50px; max-height: 50px; width: 50px; height: 50px;"></div>
+                                        </div>
+                                    </div>
+                                   <br />
+                                    <div class="card">
+                                        <div class="card-header">
+                                            New quote
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="input-group mb-3 small">
+                                                <div class="input-group-prepend"> <span class="input-group-text" id="basic-addon1"><i class="icon icon-edit"></i></span></div>
+                                            
+                                                <textarea class="form-control form-control-sm" placeholder="Type your quote here..." aria-label="Quote" ariadescribedby="basic-addon1" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="modal-footer small d-block">
+                                    <div class="col text-right p-2">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- End Modal for for change bio -->
+                </div>
+                <div class="col p-2 border border-right-0">
+                    <div class="card bg-dark text-white small">
+                      <img class="card-img" src="images/picture.jpg" alt="Card image">
+                      <div class="card-img-overlay p-0" style="overflow: auto;" ss-container>
+                        <div class="card-header d-flex align-items-center">
+                            <i class="icon icon-live"></i>&nbsp; Viziru Andrei's tag card
+                            <div class="col p-2 text-muted text-right">
+                                <i class="icon icon-clock"></i> 3 minutes ago
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <p><kbd>Certifications:</kbd> <i class="fa fa-chevron-right  "></i> <span class="badge badge-light" style="font-size: 12px;">Engineer</span></p>
+                             <p><kbd>Skills:</kbd> <i class="fa fa-chevron-right  "></i> <span class="badge badge-light" style="font-size: 12px;">html</span>, <span class="badge badge-light" style="font-size: 12px;">php</span>, <span class="badge badge-light" style="font-size: 12px;">javascript</span></p>
+                               <p><kbd>Projects:</kbd> <i class="fa fa-chevron-right  "></i> <a href="" target="_blank"><span class="badge badge-light" style="font-size: 12px;">SunsetCode</span></a>, <a href="" target="_blank"><span class="badge badge-light" style="font-size: 12px;">Simplory</span></a>, <a href="" target="_blank"><span class="badge badge-light" style="font-size: 12px;">Jewel</span></a></p>
+                              asdasdasd<br />
+                              asdasdasd<br />
+                              asdasdasd<br />
+                          </div>
+
+                          <div class="card-footer d-flex" style="position: relative;">
+                            
+                              <div class="col-sm text-center">
+                                  <button type="button" class="btn-reset text-white" data-toggle="modal" data-target="#viewTagCard" onmouseover="this.style.opacity=1;" onmouseout="this.style.opacity=0.8;" style="opacity: 0.8;"><i class="icon icon-expand icon-large" ></i></button>
+                                 
+                            </div>
+                              <div class="col-sm text-center">
+                                  <button type="button" class="btn-reset text-white" data-toggle="modal" data-target="#editTagCard" onmouseover="this.style.opacity=1;" onmouseout="this.style.opacity=0.8;" style="opacity: 0.8;"><i class="icon icon-edit icon-large" ></i></button>
+                            </div>
+                              <div class="col-sm text-center">
+                                  <i class="icon icon-send icon-large" onmouseover="this.style.opacity=1;" onmouseout="this.style.opacity=0.8;" style="opacity: 0.8;"></i>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                    <!-- Modal for view tag card -->
+                    <div class="modal fade" id="viewTagCard" tabindex="-1" role="dialog" aria-labelledby="lol" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="card bg-dark text-black small">
+                                  <img class="card-img" src="images/picture.jpg" alt="Card image">
+                                  <div class="card-img-overlay p-0" style="overflow: auto;" ss-container>
+                                    <div class="card-header d-flex align-items-center text-white">
+                                        <i class="icon icon-live"></i>&nbsp; Viziru Andrei's tag card
+                                        <div class="col p-2 text-muted text-right">
+                                            <i class="icon icon-clock"></i> 3 minutes ago
+                                        </div>
+                                      </div>
+                                      <div class="card-body">
+                                        <p><kbd>Certifications:</kbd> <i class="fa fa-chevron-right  "></i> <span class="badge badge-light" style="font-size: 12px;">Engineer</span></p>
+                                         <p><kbd>Skills:</kbd> <i class="fa fa-chevron-right  "></i> <span class="badge badge-light" style="font-size: 12px;">html</span>, <span class="badge badge-light" style="font-size: 12px;">php</span>, <span class="badge badge-light" style="font-size: 12px;">javascript</span></p>
+                                           <p><kbd>Projects:</kbd> <i class="fa fa-chevron-right  "></i> <a href="" target="_blank"><span class="badge badge-light" style="font-size: 12px;">SunsetCode</span></a>, <a href="" target="_blank"><span class="badge badge-light" style="font-size: 12px;">Simplory</span></a>, <a href="" target="_blank"><span class="badge badge-light" style="font-size: 12px;">Jewel</span></a></p>
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                          asdasdasd<br />
+                                      
+                                      </div>
+
+                                      <div class="card-footer d-flex w-100">
+
+                                          <div class="col-sm text-center">
+                                           
+                                              <button type="button" class="btn-reset" data-dismiss="modal" aria-hidden="true" onmouseover="this.style.opacity=1;" onmouseout="this.style.opacity=0.8;" style="opacity: 0.8;"><i class="icon icon-close icon-large text-white" ></i></button>
+
+                                        </div>
+                                          <div class="col-sm text-center">
+                                              <i class="icon icon-edit icon-large text-white" onmouseover="this.style.opacity=1;" onmouseout="this.style.opacity=0.8;" style="opacity: 0.8;" data-toggle="modal" data-target="#editTagCard"></i>
+                                        </div>
+                                          <div class="col-sm text-center">
+                                              <i class="icon icon-send icon-large text-white" onmouseover="this.style.opacity=1;" onmouseout="this.style.opacity=0.8;" style="opacity: 0.8;"></i>
+                                        </div>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- End Modal for view tag card -->
+                
+                <!-- Modal for edit tag card -->
+                    <div class="modal fade" id="editTagCard" tabindex="-1" role="dialog" aria-labelledby="lol" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="card-body bg-profile">
+                                    <table class="table table-dark">
+                                      <tbody>
+                                        <tr>
+                                          <td class="w-25"><kbd>Certifications:</kbd></td>
+                                            <td id="toAddCertifications">
+                                            <div class="input-group input-group-sm mb-3">
+                                                    <input type="text" class="form-control" placeholder="Type your certification here...">
+                                                      <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroup-sizing-sm" onclick="addCertification();"><i class="fa fa-plus"></i></span>
+                                                      </div>
+                                                      
+                                            </div>
+                                            
+                                            </td>
+                                            <td class="w-25">
+                                                <span class="badge badge-light" style="font-size: 12px;" data-toggle="popover" title="Delete this certification!" data-content="&times;">Engineer</span>, <span class="badge badge-light" style="font-size: 12px;" data-toggle="popover" title="Delete this certification!" data-content="&times;">Mechanic</span>, <span class="badge badge-light" style="font-size: 12px;" data-toggle="popover" title="Delete this certification!" data-content="&times;">Programmer</span>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                   
+                                    <hr />
+                                    <table class="table table-dark">
+                                      <tbody>
+                                        <tr>
+                                          <td class="w-25"><kbd>Skills:</kbd></td>
+                                            <td id="toAddSkills">
+                                                <div class="input-group input-group-sm mb-3">
+                                                    <input type="text" class="form-control" placeholder="Type your skill here...">
+                                                      <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroup-sizing-sm" onclick="addSkill();"><i class="fa fa-plus"></i></span>
+                                                      </div>
+                                                      
+                                                    </div>
+
+
+                                            </td>
+                                           
+                                            <td class="w-25">
+                                                <span class="badge badge-light" style="font-size: 12px;" data-toggle="popover" title="Delete this skill!" data-content="&times;">html</span>, <span class="badge badge-light" style="font-size: 12px;" data-toggle="popover" title="Delete this skill!" data-content="&times;">php</span>, <span class="badge badge-light" style="font-size: 12px;" data-toggle="popover" title="Delete this skill!" data-content="&times;">javascript</span>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                     <hr />
+                                    <table class="table table-dark">
+                                      <tbody>
+                                        <tr>
+                                          <td class="w-25"><kbd>Projects:</kbd></td>
+                                            <td id="toAddProjects">
+                                                <div class="input-group input-group-sm mb-3">
+                                                    <input type="text" class="form-control" placeholder="Type project name here...">
+                                                      <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroup-sizing-sm" onclick="addProject();"><i class="fa fa-plus"></i></span>
+                                                      </div>
+                                                      
+                                                    </div>
+                                                <div class="input-group input-group-sm mb-3">
+                                                    <input type="text" class="form-control" placeholder="Enter project link here...">
+                                                      <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa fa-link"></i></span>
+                                                      </div>
+                                                      
+                                                    </div>
+
+                                            </td>
+                                           
+                                            <td class="w-25">
+                                                <a target="_blank"><span class="badge badge-light" style="font-size: 12px;" data-toggle="popover" title="Delete this project!" data-content="&times;">SunsetCode</span></a>, <a target="_blank"><span class="badge badge-light" style="font-size: 12px;" data-toggle="popover" title="Delete this project!" data-content="&times;">Simplory</span></a>, <a target="_blank"><span class="badge badge-light" style="font-size: 12px;" data-toggle="popover" title="Delete this project!" data-content="&times;">Jewel</span></a>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    
+                                    
+                                    <div class="col p-2 small text-muted text-right">
+                                        <i class="icon icon-clock"></i> 3 decades ago
+                                    </div>
+                                </div>
+                                <div class="modal-header p-relative">
+                                    <div class="trailing">
+                                        <img src="images/trailing_profile.png" alt="" />
+                                    </div>
+                                    <div class="col p-0 small">
+                                        <img src="images/boy.png" width="50" height="50" class="image-round img-thumbnail" /> edit Tag Card
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                </div>
+                                <div class="modal-footer small d-block">
+                                    <div class="col text-right p-2">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- End Modal for edit tag card -->
+            </div>
+            <div class="col-auto border">
+                <div class="col p-0">
+                    <div class="col p-2">
+                        <button type="button" class="btn btn-outline-secondary w-100 text-left" onclick="location.href = 'schedule.html'"><i class="icon icon-clock"></i> Schedule</button>
+                    </div>
+                    <div class="col p-2">
+                        <button type="button" class="btn btn-outline-secondary w-100 text-left" onclick="location.href = 'notifications.html'"><i class="icon icon-notifications"></i> Notifications</button>
+                    </div>
+                    <div class="col p-2">
+                        <button type="button" class="btn btn-outline-secondary w-100 text-left" onclick="location.href = 'settings.html'"><i class="icon icon-settings"></i> Settings</button>
+                    </div>
+                    <div class="col p-2">
+                        <button type="button" class="btn btn-outline-secondary w-100 text-left" onclick="location.href = 'profile-user.html'"><i class="icon icon-help-center"></i> User's profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end profile container -->
+        
+        <!-- start page content container -->
+        <div class="row padding-10">
+            <!-- start left menu -->
+            <div class="fixed-col-300 padding-10 small">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Home
+                    <i class="icon icon-home"></i>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="photos.html">Photos</a>
+                    <i class="icon icon-picture"></i>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="videos.html">Videos</a>
+                    <i class="icon icon-video"></i>
+                  </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Favourites
+                    <i class="icon icon-favourite"></i>
+                  </li>
+                </ul>
+            </div><!-- end left menu -->
+            
+            <!-- start middle column -->
+            <div class="fixed-col-750 padding-10">
+                <!-- start write quote -->
+                <div class="card">
+                  <div class="card-header d-flex p-0 small">
+                    <div class="col p-2"><i class="icon icon-share"></i> Write statement</div>
+                      <div class="col p-2"><i class="icon icon-live"></i> Live</div>
+                      <div class="col"></div>
+                      <div class="col"></div>
+                  </div>
+                  <div class="card-body p-0 d-flex">
+                     <div class="col-auto p-3"><img src="images/boy.png" class="image-round img-thumbnail" alt="" width="50" height="50" /></div>
+                      <div contenteditable="true" style="height: 100px !important; width: 100%; overflow: hidden;"></div>
+                  </div>
+                  <div class="card-footer d-flex align-items-center p-0 small">
+                    <div class="col p-2"><i class="icon icon-media"></i> Media</div>
+                      <div class="col p-2"><i class="icon icon-location"></i> Location</div>
+                      <div class="col"></div>
+                      <div class="col text-right p-2"><button class="btn btn-outline-secondary btn-sm" type="button">Quote</button></div>
+                  </div>
+                </div>
+                <!-- end write quote -->
+                
+                <hr>
+
+
+            </div><!-- end middle column -->
+           
+            <div class="fixed-col-300 padding-10 small">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Dapibus ac facilisis in <span class="fade"><i class="icon icon-close"></i></span></li>
+                    <li class="list-group-item">Morbi leo risus <span class="fade"><i class="icon icon-close"></i></span></li>
+                    <li class="list-group-item">Porta ac consectetur ac <span class="fade"><i class="icon icon-close"></i></span></li>
+                    <li class="list-group-item">Vestibulum at eros <span class="fade"><i class="icon icon-close"></i></span></li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <!-- start page footer -->
+            <div class="col d-flex">
+                <div class="col">the footer</div>
+                <div class="col">goes</div>
+                <div class="col">here</div>
+            </div>
+            <!-- end page footer -->
+        </div><!-- end page content container -->
+        
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/simple-scrollbar.min.js"></script>
+        
+        <script>
+          var el = document.querySelector('.profileCard');
+          SimpleScrollbar.initEl(el);
+        </script>
+        <!-- Page-Level Demo Scripts - Notifications - Use for reference -->
+        <script>
+        // tooltip demo
+        $('.tooltip-demo').tooltip({
+            selector: "[data-toggle=tooltip]",
+            container: "body"
+        })
+        // popover demo
+        $("[data-toggle=popover]")
+            .popover()
+        </script>
+        
+        <script>
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+        </script>
+        
+        <script>
+        function showComment(theField) {
+            var x = document.getElementById(theField);
+            if (x.style.display === "none") {
+                x.setAttribute('style', 'display: block !important');
+            } else {
+                x.setAttribute('style', 'display: none !important');
+            }
+        }
+        </script>
+         <script>
+            function addSkill() {
+                var toAdd = document.getElementById('toAddSkills');
+                var skillDiv = document.createElement('div');
+                var inputData = document.createElement('input');
+                var removeField = document.createElement('div');
+                var removeSign = document.createElement('span');
+                removeSign.innerHTML = '<i class="fa fa-minus"></i>';
+               
+                removeSign.setAttribute('class', 'input-group-text');
+                removeSign.onclick = function () { skillDiv.parentNode.removeChild(skillDiv); }
+                removeField.appendChild(removeSign);
+                removeField.setAttribute('class', 'input-group-prepend');
+                                                    
+                inputData.setAttribute('type', 'text');
+                inputData.setAttribute('class', 'form-control');
+                inputData.setAttribute('placeholder', 'Type your skill here...');
+                skillDiv.appendChild(inputData);
+                skillDiv.appendChild(removeField);
+
+                skillDiv.appendChild(removeField);
+                skillDiv.setAttribute('class', 'input-group input-group-sm mb-3'); // and make sure myclass has some styles in css
+                                                   
+                toAdd.appendChild(skillDiv);
+            }                               
+        </script>
+        <script>
+            function addCertification() {
+                var toAddCertification = document.getElementById('toAddCertifications');
+                var certificationDiv = document.createElement('div');
+                var inputData = document.createElement('input');
+                var removeField = document.createElement('div');
+                var removeSign = document.createElement('span');
+                removeSign.innerHTML = '<i class="fa fa-minus"></i>';
+               
+                removeSign.setAttribute('class', 'input-group-text');
+                removeSign.onclick = function () { certificationDiv.parentNode.removeChild(certificationDiv); }
+                removeField.appendChild(removeSign);
+                removeField.setAttribute('class', 'input-group-prepend');
+                                                    
+                inputData.setAttribute('type', 'text');
+                inputData.setAttribute('class', 'form-control');
+                inputData.setAttribute('placeholder', 'Type your certification here...');
+                certificationDiv.appendChild(inputData);
+                certificationDiv.appendChild(removeField);
+
+                certificationDiv.appendChild(removeField);
+                certificationDiv.setAttribute('class', 'input-group input-group-sm mb-3'); // and make sure myclass has some styles in css
+                                                   
+                toAddCertification.appendChild(certificationDiv);
+            }                               
+        </script>
+         <script>
+            function addProject() {
+                var toAddProj = document.getElementById('toAddProjects');
+                var certificationNameDiv = document.createElement('div');
+                var inputDataName = document.createElement('input');
+                var removeField = document.createElement('div');
+                var removeSign = document.createElement('span');
+                removeSign.innerHTML = '<i class="fa fa-minus"></i>';
+                removeSign.setAttribute('class', 'input-group-text');
+               
+                
+                var certificationLinkDiv = document.createElement('div');
+                var inputDataLink = document.createElement('input');
+                var linkField = document.createElement('div');
+                var linkSign = document.createElement('span');
+                var separator = document.createElement('hr');
+                linkSign.innerHTML = '<i class="fa fa-link"></i>';
+                linkSign.setAttribute('class', 'input-group-text');
+                
+                removeSign.onclick = function () { certificationNameDiv.parentNode.removeChild(certificationNameDiv); certificationLinkDiv.parentNode.removeChild(certificationLinkDiv); separator.parentNode.removeChild(separator); }
+                
+                removeField.appendChild(removeSign);
+                linkField.appendChild(linkSign);
+                
+                removeField.setAttribute('class', 'input-group-prepend');
+                linkField.setAttribute('class', 'input-group-prepend');
+                
+                inputDataName.setAttribute('type', 'text');
+                inputDataName.setAttribute('class', 'form-control');
+                inputDataName.setAttribute('placeholder', 'Type your project name here...');
+                
+                inputDataLink.setAttribute('type', 'text');
+                inputDataLink.setAttribute('class', 'form-control');
+                inputDataLink.setAttribute('placeholder', 'Type your link here...');
+                
+                certificationNameDiv.appendChild(inputDataName);
+                certificationNameDiv.appendChild(removeField);
+                
+                certificationLinkDiv.appendChild(inputDataLink);
+                certificationLinkDiv.appendChild(linkField);
+                
+                certificationNameDiv.setAttribute('class', 'input-group input-group-sm mb-3'); // and make sure myclass has some styles in css
+                certificationLinkDiv.setAttribute('class', 'input-group input-group-sm mb-3'); // and make sure myclass has some styles in css
+                
+                
+                toAddProj.appendChild(separator);
+                toAddProj.appendChild(certificationNameDiv);
+                toAddProj.appendChild(certificationLinkDiv);
+                
+                
+            }                               
+        </script>
+        
+    </body>
+</html>
