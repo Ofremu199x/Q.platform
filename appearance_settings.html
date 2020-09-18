@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Qonnect Home</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="fontawsome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icons.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- start top row -->
+        <div class="row padding-10">
+            <div class="fixed-col-300 padding-10">
+                <a href="index.html"><img src="images/logo.png" alt="" /></a>
+            </div>
+            <div class="fixed-col-750 padding-10">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button"><i class="icon icon-search"></i></button>
+                  </div>
+                </div>
+            </div>
+            <div class="fixed-col-300 padding-10">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                  <button type="button" class="btn btn-outline-secondary"><i class="icon icon-trending"></i> Trending</button>
+
+                  <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="icon icon-user"></i> Viziru Andrei
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <a class="dropdown-item" href="profile.html"><img src="images/boy.png" class="image-round img-thumbnail" alt="" width="50" height="50" /> Profile</a>
+                      <a class="dropdown-item" href="schedule.html"><i class="icon icon-clock"></i> Schedule</a>
+                        <a class="dropdown-item" href="notifications.html"><i class="icon icon-notifications"></i> Notifications</a>
+                        <a class="dropdown-item" href="messages.html"><i class="icon icon-comment"></i> Messages</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="settings.html"><i class="icon icon-settings"></i> Settings</a>
+                      <a class="dropdown-item" href="help_center.html"><i class="icon icon-help-center"></i> Help center</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-close"></i> Logout</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div><!-- end top row -->
+
+        <!-- start page content container -->
+        <div class="row padding-10">
+            <!-- start left menu -->
+            <div class="fixed-col-300 padding-10 small">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="settings.html">Settings</a>
+                    <i class="icon icon-settings"></i>
+
+                  </li>
+                    <!-- start sub menu -->
+                <li class="list-group-item d-flex justify-content-between align-items-center" style="margin-left: 20px;">
+                    <a href="general_settings.html">General settings</a>
+                    <i class="icon icon-settings" style="color: blue;"></i>
+                  </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="margin-left: 20px;">
+                    <a href="security_settings.html">Security settings</a>
+                    <i class="icon icon-settings"></i>
+                  </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="margin-left: 20px;">
+                    <a href="notifications_settings.html">Notifications settings</a>
+                    <i class="icon icon-settings"></i>
+                  </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="margin-left: 20px;">
+                    <a href="regional_settings.html">Regional settings</a>
+                    <i class="icon icon-settings"></i>
+                  </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="margin-left: 20px;">
+                    <a href="privacy_settings.html">Privacy settings</a>
+                    <i class="icon icon-settings"></i>
+                  </li>
+                </ul>
+            </div><!-- end left menu -->
+
+            <!-- start middle column -->
+            <div class="fixed-col-750 padding-10">
+                 <!-- start background settings -->
+                <div class="row">
+                    <div class="col-sm">
+
+                        <!-- start background settings -->
+                        <div class="card">
+                            <div class="card-body rounded-top" id="settings_background_image" style="background-image: url(images/picture.jpg); min-height: 400px; background-repeat: no-repeat; background-position: bottom right;"  onmouseover="document.getElementById('settings_background_image').setAttribute('style', 'background-image: url(images/background_hover.svg); min-height: 400px; background-repeat: no-repeat; background-position: bottom right;');" onmouseout="document.getElementById('settings_background_image').setAttribute('style', 'background-image: url(images/picture.jpg); min-height: 400px; background-repeat: no-repeat; background-position: bottom right;');"></div>
+
+                            <div class="card-footer sm d-flex">
+                                <div class="col-sm p-0">
+                                    <b>Background image</b>
+                                </div>
+                                <div class="col-sm text-right p-0">
+                                    <a class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#backgroundSettingsModal">Change</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- end background settings -->
+                    </div>
+
+
+                    <div class="modal fade" id="backgroundSettingsModal" tabindex="-2" role="dialog" aria-labelledby="modalPost" aria-hidden="true">
+                    <!-- start text post modal dialog -->
+                    <div class="modal-dialog modal-lg">
+                        <!-- start text post modal content -->
+                        <div class="modal-content">
+
+
+                            <!-- start text post modal body -->
+                            <div class="modal-body bg-purple p-2 rounded-top" style="background-image: url(images/background_hover.svg); background-position: bottom right; background-repeat: no-repeat; min-height: 150px;">
+                                <br>
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <div class="col p-2 text-muted small text-right">
+                                    <i class="icon icon-clock"></i> 3 minutes ago
+                                </div>
+
+                            </div>
+                            <!-- end text post modal body -->
+
+                            <!-- start text post modal header -->
+                            <div class="modal-header small p-relative">
+                                <div class="trailing">
+                                    <img src="images/trailing.png" alt="" />
+                                </div>
+                                <div class="col p-0">
+                                    <img src="images/boy.png" class="image-round img-thumbnail" alt="" width="50" height="50" /> background gallery
+                                </div>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <!-- end text post modal header -->
+
+
+                            <!-- start text post modal footer -->
+                            <div class="modal-footer d-block small p-2">
+                                    <div class="col text-right p-2">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                            </div>
+                            <!-- end text post modal footer -->
+                        </div>
+                        <!-- end text post modal content -->
+                    </div>
+                    <!-- end text post modal dialog -->
+                </div>
+
+                </div>
+                <!-- end background settings -->
+                <br>
+
+                <!-- start 3dbackground settings -->
+                <div class="row">
+                    <div class="col-sm">
+
+                        <!-- start 3dbackground settings -->
+                        <div class="card">
+                            <div class="card-body rounded-top" id="settings_3dbackground_image" style="background-image: url(images/picture.jpg); min-height: 400px; background-repeat: no-repeat; background-position: bottom right;"  onmouseover="document.getElementById('settings_3dbackground_image').setAttribute('style', 'background-image: url(images/background3d_hover.svg); min-height: 400px; background-repeat: no-repeat; background-position: bottom right;');" onmouseout="document.getElementById('settings_3dbackground_image').setAttribute('style', 'background-image: url(images/picture.jpg); min-height: 400px; background-repeat: no-repeat; background-position: bottom right;');"></div>
+
+                            <div class="card-footer sm d-flex">
+                                <div class="col-sm p-0">
+                                    <b>3D background</b>
+                                </div>
+                                <div class="col-sm text-right p-0">
+                                    <a class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#3dbackgroundSettingsModal">Change</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- end background settings -->
+                    </div>
+
+
+                    <div class="modal fade" id="3dbackgroundSettingsModal" tabindex="-2" role="dialog" aria-labelledby="modalPost" aria-hidden="true">
+                    <!-- start text post modal dialog -->
+                    <div class="modal-dialog modal-lg">
+                        <!-- start text post modal content -->
+                        <div class="modal-content">
+
+
+                            <!-- start text post modal body -->
+                            <div class="modal-body bg-purple p-2 rounded-top" style="background-image: url(images/background3d_hover.svg); background-position: bottom right; background-repeat: no-repeat; min-height: 150px;">
+                                <br>
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <img src="/images/picture.jpg" width="250" height="100" class="img-thumbnail" />
+                                <div class="col p-2 text-muted small text-right">
+                                    <i class="icon icon-clock"></i> 3 minutes ago
+                                </div>
+
+                            </div>
+                            <!-- end text post modal body -->
+
+                            <!-- start text post modal header -->
+                            <div class="modal-header small p-relative">
+                                <div class="trailing">
+                                    <img src="images/trailing.png" alt="" />
+                                </div>
+                                <div class="col p-0">
+                                    <img src="images/boy.png" class="image-round img-thumbnail" alt="" width="50" height="50" /> 3D background gallery
+                                </div>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <!-- end text post modal header -->
+
+
+                            <!-- start text post modal footer -->
+                            <div class="modal-footer d-block small p-2">
+                                    <div class="col text-right p-2">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                            </div>
+                            <!-- end text post modal footer -->
+                        </div>
+                        <!-- end text post modal content -->
+                    </div>
+                    <!-- end text post modal dialog -->
+                </div>
+
+                </div>
+                <!-- end background settings -->
+                <br />
+
+
+                <!-- theme settings -->
+                    <div class="row">
+                    <div class="col-sm">
+                        <!-- start feed translation setting -->
+                        <div class="card" onmouseover="document.getElementById('theme_image').setAttribute('style', 'background-image: url(images/theme_hover.svg); background-repeat: no-repeat; background-position: right bottom; min-height: 150px;');" onmouseout="document.getElementById('theme_image').setAttribute('style', 'background-image: url(images/theme.svg); background-repeat: no-repeat; background-position: right bottom; min-height: 150px;');">
+                            <div class="card-body bg-purple" id="theme_image" style="min-height: 150px; background-image: url(images/theme.svg); background-repeat: no-repeat; background-position: right bottom;">
+                               <kbd>Reaver</kbd>
+                            </div>
+                            <div class="card-footer sm d-flex">
+                                <div class="col-sm p-0">
+                                    <b>Theme</b>
+                                </div>
+                                <div class="col-sm text-right p-0">
+                                    <a class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#themeSettingsModal">Change</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- end feed translation setting -->
+                    </div>
+
+                    <div class="modal fade" id="themeSettingsModal" tabindex="-2" role="dialog" aria-labelledby="modalPost" aria-hidden="true">
+                    <!-- start text post modal dialog -->
+                    <div class="modal-dialog modal-lg">
+                        <!-- start text post modal content -->
+                        <div class="modal-content">
+
+
+                            <!-- start text post modal body -->
+                            <div class="modal-body bg-purple p-2 rounded-top" style="background-image: url(images/theme_hover.svg); background-position: bottom right; background-repeat: no-repeat; min-height: 150px;">
+                                <br>
+                                <div class="container d-flex">
+                                    <img src="images/theme1.svg" class="img-thumbnail">
+                                    <img src="images/theme2.svg" class="img-thumbnail">
+                                    <img src="images/theme3.svg" class="img-thumbnail">
+                                    <img src="images/theme4.svg" class="img-thumbnail">
+                                    <img src="images/theme5.svg" class="img-thumbnail">
+                                </div>
+                                <div class="col p-2 text-muted small text-right">
+                                    <i class="icon icon-clock"></i> 3 minutes ago
+                                </div>
+
+                            </div>
+                            <!-- end text post modal body -->
+
+                            <!-- start text post modal header -->
+                            <div class="modal-header small p-relative">
+                                <div class="trailing">
+                                    <img src="images/trailing.png" alt="" />
+                                </div>
+                                <div class="col p-0">
+                                    <img src="images/boy.png" class="image-round img-thumbnail" alt="" width="50" height="50" /> change theme
+                                </div>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <!-- end text post modal header -->
+
+
+                            <!-- start text post modal footer -->
+                            <div class="modal-footer d-block small p-2">
+                                    <div class="col text-right p-2">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                            </div>
+                            <!-- end text post modal footer -->
+                        </div>
+                        <!-- end text post modal content -->
+                    </div>
+                    <!-- end text post modal dialog -->
+                </div>
+
+                        <!--
+###################################################################################################################################################################################################################################################################################################################################################################################################################################################-->
+                </div>
+                <!-- end theme settings -->
+            </div><!-- end middle column -->
+
+            <div class="fixed-col-300 padding-10 small">
+                <div class="col-auto">
+                    <div class="col p-0">
+                        <div class="col p-2">
+                            <button type="button" class="btn btn-outline-secondary w-100 text-left" onclick="location.href = 'schedule.html'"><i class="icon icon-clock"></i> Schedule</button>
+                        </div>
+                        <div class="col p-2">
+                            <button type="button" class="btn btn-outline-secondary w-100 text-left" onclick="location.href = 'notifications.html'"><i class="icon icon-notifications"></i> Notifications</button>
+                        </div>
+                        <div class="col p-2">
+                            <button type="button" class="btn btn-outline-secondary w-100 text-left" onclick="location.href = 'settings.html'"><i class="icon icon-settings"></i> Settings</button>
+                        </div>
+                        <div class="col p-2">
+                            <button type="button" class="btn btn-outline-secondary w-100 text-left" onclick="location.href = 'help_center.html'"><i class="icon icon-help-center"></i> Help center</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div><!-- end page content container -->
+
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Page-Level Demo Scripts - Notifications - Use for reference -->
+        <script>
+        // tooltip demo
+        $('.tooltip-demo').tooltip({
+            selector: "[data-toggle=tooltip]",
+            container: "body"
+        })
+        // popover demo
+        $("[data-toggle=popover]")
+            .popover()
+        </script>
+
+        <script>
+        function showComment(theField) {
+            var x = document.getElementById(theField);
+            if (x.style.display === "none") {
+                x.setAttribute('style', 'display: block !important');
+            } else {
+                x.setAttribute('style', 'display: none !important');
+            }
+        }
+                                            </script>
+
+    </body>
+</html>

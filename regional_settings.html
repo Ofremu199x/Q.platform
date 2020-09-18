@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Qonnect Regional Settings</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="fontawsome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icons.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- start top row -->
+        <div class="row padding-10">
+            <div class="fixed-col-300 padding-10">
+                <a href="index.html"><img src="images/logo.png" alt="" /></a>
+            </div>
+            <div class="fixed-col-750 padding-10">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button"><i class="icon icon-search"></i></button>
+                  </div>
+                </div>
+            </div>
+            <div class="fixed-col-300 padding-10">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                  <button type="button" class="btn btn-outline-secondary"><i class="icon icon-trending"></i> Trending</button>
+
+                  <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="icon icon-user"></i> Viziru Andrei
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <a class="dropdown-item" href="profile.html"><img src="images/boy.png" class="image-round img-thumbnail" alt="" width="50" height="50" /> Profile</a>
+                      <a class="dropdown-item" href="schedule.html"><i class="icon icon-clock"></i> Schedule</a>
+                         <a class="dropdown-item" href="notifications.html"><i class="icon icon-notifications"></i> Notifications</a>
+                        <a class="dropdown-item" href="messages.html"><i class="icon icon-comment"></i> Messages</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="settings.html"><i class="icon icon-settings"></i> Settings</a>
+                      <a class="dropdown-item" href="help_center.html"><i class="icon icon-help-center"></i> Help center</a>
+                      <a class="dropdown-item" href="#"><i class="icon icon-close"></i> Logout</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div><!-- end top row -->
+
+        <!-- start page content container -->
+        <div class="row padding-10">
+            <!-- start left menu -->
+            <div class="fixed-col-300 padding-10 small">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="settings.html">Settings</a>
+                    <i class="icon icon-settings"></i>
+
+                  </li>
+                    <!-- start sub menu -->
+                <li class="list-group-item d-flex justify-content-between align-items-center" style="margin-left: 20px;">
+                    <a href="general_settings.html">General settings</a>
+                    <i class="icon icon-settings" style="color: blue;"></i>
+                  </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="margin-left: 20px;">
+                    <a href="security_settings.html">Security settings</a>
+                    <i class="icon icon-settings"></i>
+                  </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="margin-left: 20px;">
+                    <a href="notifications_settings.html">Notifications settings</a>
+                    <i class="icon icon-settings"></i>
+                  </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="margin-left: 20px;">
+                    <a href="regional_settings.html">Regional settings</a>
+                    <i class="icon icon-settings"></i>
+                  </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="margin-left: 20px;">
+                    <a href="privacy_settings.html">Privacy settings</a>
+                    <i class="icon icon-settings"></i>
+                  </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center" style="margin-left: 20px;">
+                    <a href="appearance_settings.html">Appearance settings</a>
+                    <i class="icon icon-settings"></i>
+                  </li>
+                </ul>
+            </div><!-- end left menu -->
+
+            <!-- start middle column -->
+            <div class="fixed-col-750 padding-10">
+                <div class="row">
+                    <div class="col-sm">
+
+                        <!-- start language settings -->
+                        <div class="card" onmouseover="document.getElementById('settings_language_image').setAttribute('src', 'images/language_hover.svg');" onmouseout="document.getElementById('settings_language_image').setAttribute('src', 'images/language.svg');">
+
+
+                            <div class="media-post bg-purple">
+                                <div class="media-caption">
+
+                                    <p style="color: dimgrey;" id="settings_language"><b><kbd>Romana</kbd></b></p>
+
+                                </div>
+                                <img class="card-img-top" id="settings_language_image" src="images/language.svg" alt="Card image cap" >
+
+                            </div>
+
+                            <div class="card-footer sm d-flex">
+                                <div class="col-sm p-0">
+                                    <b>Language</b>
+                                </div>
+                                <div class="col-sm text-right p-0">
+                                    <a href="settings_general.html" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#languageSettingsModal">Change</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- end language settings -->
+                    </div>
+
+                 <!-- start language modal settings -->
+                <div class="modal fade" id="languageSettingsModal" tabindex="-2" role="dialog" aria-labelledby="modalPost" aria-hidden="true">
+                    <!-- start text post modal dialog -->
+                    <div class="modal-dialog modal-lg">
+                        <!-- start text post modal content -->
+                        <div class="modal-content">
+
+
+                            <!-- start text post modal body -->
+                            <div class="modal-body bg-purple p-2" onmouseover="document.getElementById('textModalQuote').style.display = 'block';" onmouseout="document.getElementById('textModalQuote').setAttribute('style', 'display: none !important');" style="background-image: url(images/language_hover.svg); background-position: bottom right; background-repeat: no-repeat; min-height: 150px;">
+                                <br>
+                               <div class="input-group mb-3 w-50">
+                                  <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01"><i class="fa fa-globe"></i></label>
+                                  </div>
+                                  <select class="custom-select" id="inputGroupSelect01">
+                                    <option selected>Choose...</option>
+                                    <option value="1">Romanian</option>
+                                    <option value="2">English</option>
+                                    <option value="3">French</option>
+                                      <option value="3">and</option>
+                                      <option value="3">so</option>
+                                      <option value="3">on</option>
+                                  </select>
+                                </div>
+
+                                <div class="col p-2 text-muted small text-right">
+                                    <i class="icon icon-clock"></i> 3 minutes ago
+                                </div>
+
+                            </div>
+                            <!-- end text post modal body -->
+
+                            <!-- start text post modal header -->
+                            <div class="modal-header small p-relative">
+                                <div class="trailing">
+                                    <img src="images/trailing.png" alt="" />
+                                </div>
+                                <div class="col p-0">
+                                    <img src="images/boy.png" class="image-round img-thumbnail" alt="" width="50" height="50" /><b><kbd>Romanian</kbd></b>
+                                </div>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <!-- end text post modal header -->
+
+
+                            <!-- start text post modal footer -->
+                            <div class="modal-footer d-block small p-2">
+                                    <div class="col text-right p-2">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                            </div>
+                            <!-- end text post modal footer -->
+                        </div>
+                        <!-- end text post modal content -->
+                    </div>
+                    <!-- end text post modal dialog -->
+                </div>
+                <!-- end language modal settings -->
+
+                    <div class="col-sm">
+
+                        <!-- start time settings -->
+                        <div class="card" onmouseover="document.getElementById('time_image').setAttribute('src', 'images/time_hover.svg');" onmouseout="document.getElementById('time_image').setAttribute('src', 'images/time.svg');">
+
+
+                            <div class="media-post bg-purple">
+                                <div class="media-caption">
+                                    <p style="color: dimgrey;" id="emailAddress"><b><kbd>UTC+10:30 Australian Central Daylight Savings Time</kbd></b></p>
+                                </div>
+                                <img class="card-img-top" id="time_image" src="images/time.svg" alt="Card image cap" >
+
+                            </div>
+
+                            <div class="card-footer sm d-flex">
+                                 <div class="col-sm p-0">
+                                    <b>Time</b>
+                                </div>
+                                <div class="col-sm text-right p-0">
+                                    <a href="settings_general.html" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#timeSettingsModal">Change</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end time settings -->
+
+                 <!-- start time modal settings -->
+                <div class="modal fade" id="timeSettingsModal" tabindex="-2" role="dialog" aria-labelledby="modalPost" aria-hidden="true">
+                    <!-- start text post modal dialog -->
+                    <div class="modal-dialog modal-lg">
+                        <!-- start text post modal content -->
+                        <div class="modal-content">
+
+
+                            <!-- start text post modal body -->
+                            <div class="modal-body bg-purple p-2" onmouseover="document.getElementById('textModalQuote').style.display = 'block';" onmouseout="document.getElementById('textModalQuote').setAttribute('style', 'display: none !important');" style="background-image: url(images/time_hover.svg); background-position: bottom right; background-repeat: no-repeat; min-height: 150px;">
+                                <br>
+                                <div class="input-group mb-3">
+                                  <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01"><i class="fa fa-clock-o"></i></label>
+                                  </div>
+                                  <select class="custom-select" id="inputGroupSelect01">
+                                    <option selected>Choose...</option>
+                                    <option value="1">UTC−03:00 (ART) — Palmer Station, Rothera Station</option>
+                                    <option value="2">UTC±00:00 (GMT) — Troll Station</option>
+                                    <option value="3">UTC+03:00 (UTC+03:00) — Syowa Station</option>
+                                      <option value="3">and</option>
+                                      <option value="3">so</option>
+                                      <option value="3">on</option>
+                                  </select>
+                                </div>
+
+                                <div class="col p-2 text-muted small text-right">
+                                    <i class="icon icon-clock"></i> 3 minutes ago
+                                </div>
+
+                            </div>
+                            <!-- end text post modal body -->
+
+                            <!-- start text post modal header -->
+                            <div class="modal-header small p-relative">
+                                <div class="trailing">
+                                    <img src="images/trailing.png" alt="" />
+                                </div>
+                                <div class="col p-0">
+                                    <img src="images/boy.png" class="image-round img-thumbnail" alt="" width="50" height="50" /> <b><kbd>UTC+10:30 Australian Central Daylight Savings Time</kbd></b>
+                                </div>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <!-- end text post modal header -->
+
+
+                            <!-- start text post modal footer -->
+                            <div class="modal-footer d-block small p-2">
+                                    <div class="col text-right p-2">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                            </div>
+                            <!-- end text post modal footer -->
+                        </div>
+                        <!-- end text post modal content -->
+                    </div>
+                    <!-- end text post modal dialog -->
+                </div>
+                <!--  end time modal settings -->
+                </div>
+
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm">
+                        <!-- start feed translation setting -->
+                        <div class="card" onmouseover="document.getElementById('tfeed_image').setAttribute('style', 'background-image: url(images/translate_feed_hover.svg); background-repeat: no-repeat; background-position: right bottom; min-height: 150px;');" onmouseout="document.getElementById('tfeed_image').setAttribute('style', 'background-image: url(images/translate_feed.svg); background-repeat: no-repeat; background-position: right bottom; min-height: 150px;');">
+                            <div class="card-body bg-purple" id="tfeed_image" style="min-height: 150px; background-image: url(images/translate_feed.svg); background-repeat: no-repeat; background-position: right bottom;">
+                                <div class="col-auto my-1">
+                                          <div class="custom-control custom-checkbox mr-sm-2">
+                                            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                            <label class="custom-control-label text-dark" for="customControlAutosizing"><kbd>Enable translation in feeds</kbd></label>
+                                          </div>
+                                        </div>
+                            </div>
+                            <div class="card-header">
+                                <b>Feed translate</b>
+                            </div>
+                        </div>
+                        <!-- end feed translation setting -->
+                    </div>
+
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-sm">
+                        <!-- start translate messages settings -->
+                        <div class="card" onmouseover="document.getElementById('tmessage_image').setAttribute('style', 'background-image: url(images/translate_message_hover.svg); background-repeat: no-repeat; background-position: right bottom; min-height: 150px;');" onmouseout="document.getElementById('tmessage_image').setAttribute('style', 'background-image: url(images/translate_message.svg); background-repeat: no-repeat; background-position: right bottom; min-height: 150px;');">
+                            <div class="card-body bg-purple" id="tmessage_image" style="min-height: 150px; background-image: url(images/translate_message.svg); background-repeat: no-repeat; background-position: right bottom;">
+                                <div class="col-auto my-1">
+                                          <div class="custom-control custom-checkbox mr-sm-2">
+                                            <input type="checkbox" class="custom-control-input" id="message_translate">
+                                            <label class="custom-control-label text-dark" for="message_translate"><kbd>Enable translation in messages</kbd></label>
+                                          </div>
+                                        </div>
+                            </div>
+                            <div class="card-header">
+                                <b>Message translate</b>
+                            </div>
+                        </div>
+                        <!-- end translate messages settings -->
+                    </div>
+                </div>
+
+            </div><!-- end middle column -->
+
+            <div class="fixed-col-300 padding-10 small">
+                <div class="col-auto">
+                    <div class="col p-0">
+                        <div class="col p-2">
+                            <button type="button" class="btn btn-outline-secondary w-100 text-left" onclick="location.href = 'schedule.html'"><i class="icon icon-clock"></i> Schedule</button>
+                        </div>
+                        <div class="col p-2">
+                            <button type="button" class="btn btn-outline-secondary w-100 text-left" onclick="location.href = 'notifications.html'"><i class="icon icon-notifications"></i> Notifications</button>
+                        </div>
+                        <div class="col p-2">
+                            <button type="button" class="btn btn-outline-secondary w-100 text-left" onclick="location.href = 'settings.html'"><i class="icon icon-settings"></i> Settings</button>
+                        </div>
+                        <div class="col p-2">
+                            <button type="button" class="btn btn-outline-secondary w-100 text-left" onclick="location.href = 'help_center.html'"><i class="icon icon-help-center"></i> Help center</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div><!-- end page content container -->
+
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Page-Level Demo Scripts - Notifications - Use for reference -->
+        <script>
+        // tooltip demo
+        $('.tooltip-demo').tooltip({
+            selector: "[data-toggle=tooltip]",
+            container: "body"
+        })
+        // popover demo
+        $("[data-toggle=popover]")
+            .popover()
+        </script>
+
+        <script>
+        function showComment(theField) {
+            var x = document.getElementById(theField);
+            if (x.style.display === "none") {
+                x.setAttribute('style', 'display: block !important');
+            } else {
+                x.setAttribute('style', 'display: none !important');
+            }
+        }
+                                            </script>
+
+    </body>
+</html>

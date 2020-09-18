@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Qonnect Home</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icons.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- start page row -->
+        <div class="row padding-10">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <b>Login to Qonnect!</b> <span style="float: right;"><i class="icon icon-home"></i></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend"> <span class="input-group-text" id="basic-addon1"><i class="icon icon-user"></i></span></div>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" ariadescribedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend"> <span class="input-group-text" id="basic-addon1"><b><i class="icon icon-password"></i></b></span></div>
+                            <input type="password" class="form-control" placeholder="Password" aria-label="Password" ariadescribedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="card-footer text-right">
+                        <button type="button" class="btn btn-outline-secondary btn-sm">Login <i class="icon icon-home"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center align-items-center p-2">
+                <img src="images/logo.png" alt="" />
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                         <i class="icon icon-edit"></i> <span style="float: right;"><b>Register with Qonnect!</b></span>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Firstname" aria-label="Firstname" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2"><i class="icon icon-user"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Lastname" aria-label="Lastname" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2"><i class="icon icon-user"></i></span>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2"><b>@</b></span>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2"><b><i class="icon icon-password"></i></b></span>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="Repeat Password" aria-label="Repeat Password" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2"><b><i class="icon icon-password"></i></b></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer align-items-center">
+                        <button type="button" class="btn btn-outline-secondary btn-sm"><i class="icon icon-edit"></i> Register</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end page row -->
+
+
+
+
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Page-Level Demo Scripts - Notifications - Use for reference -->
+        <script>
+        // tooltip demo
+        $('.tooltip-demo').tooltip({
+            selector: "[data-toggle=tooltip]",
+            container: "body"
+        })
+        // popover demo
+        $("[data-toggle=popover]")
+            .popover()
+        </script>
+
+        <script>
+        function showComment(theField) {
+            var x = document.getElementById(theField);
+            if (x.style.display === "none") {
+                x.setAttribute('style', 'display: block !important');
+            } else {
+                x.setAttribute('style', 'display: none !important');
+            }
+        }
+                                            </script>
+
+    </body>
+</html>
